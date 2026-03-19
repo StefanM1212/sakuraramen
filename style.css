@@ -1,5 +1,5 @@
 /* ============================================================
-   SAKURA RAMEN — style.css  (pixel-perfect v2)
+   SAKURA RAMEN — style.css  (pixel-perfect v2.1 - Case Fixed)
    Design spec: 1440px / min 160px side margins
    ============================================================ */
 
@@ -43,7 +43,7 @@ a    { text-decoration: none; color: inherit; }
   align-items: center;
   justify-content: space-between;
   padding: 0 160px;
-  background: transparent;
+  background: transparent; /* Transparent, damit das Hero-Bild durchscheint */
 }
 
 /* Logo */
@@ -105,12 +105,12 @@ a    { text-decoration: none; color: inherit; }
   width: 100%;
   height: 100vh;
   margin-top: 0;
-  background-image: url('IMG/1_hero/JPG/hero_bg.jpg');
+  /* KORREKTUR: img klein, JPG groß - exakt wie im GitHub Ordner */
+  background-image: url('img/1_hero/JPG/hero_bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
-  /* Spec: 112px top padding from the very top of the section */
   padding-top: 112px;
   display: flex;
   flex-direction: column;
@@ -204,7 +204,8 @@ a    { text-decoration: none; color: inherit; }
    OUR MENU
    ============================================================ */
 .our-menu {
-  background-image: url('IMG/3_section_our_menu/JPG/section_our_menu_bg.jpg');
+  /* KORREKTUR: img klein, JPG groß */
+  background-image: url('img/3_section_our_menu/JPG/section_our_menu_bg.jpg');
   background-size: cover;
   background-position: center center;
   padding: 120px 160px 80px;
@@ -220,7 +221,6 @@ a    { text-decoration: none; color: inherit; }
   margin-bottom: 64px;
 }
 
-/* Alternating rows */
 .menu-row {
   display: flex;
   align-items: center;
@@ -237,7 +237,6 @@ a    { text-decoration: none; color: inherit; }
   margin-bottom: 0;
 }
 
-/* Dish image – circular, 352×352 */
 .dish-img {
   width:  352px;
   height: 352px;
@@ -246,7 +245,6 @@ a    { text-decoration: none; color: inherit; }
   flex-shrink: 0;
 }
 
-/* Dish text block */
 .dish-info {
   display: flex;
   flex-direction: column;
@@ -261,7 +259,6 @@ a    { text-decoration: none; color: inherit; }
   line-height: 1.1;
 }
 
-/* Price table */
 .price-list {
   display: flex;
   flex-direction: column;
@@ -273,7 +270,6 @@ a    { text-decoration: none; color: inherit; }
   justify-content: space-between;
   align-items: baseline;
   gap: 48px;
-  /* Fixed width so columns stay consistent across rows */
   width: 340px;
 }
 
@@ -351,14 +347,12 @@ a    { text-decoration: none; color: inherit; }
   justify-content: space-between;
 }
 
-/* Brand logo (H: 44px) */
 .footer-brand {
   height: 44px;
   width: auto;
   display: block;
 }
 
-/* Social icons row */
 .footer-socials {
   display: flex;
   align-items: center;
@@ -374,7 +368,6 @@ a    { text-decoration: none; color: inherit; }
 
 .footer-socials a:hover { opacity: 0.6; }
 
-/* Social icon size: 40×40 */
 .footer-socials img {
   width:  40px;
   height: 40px;
