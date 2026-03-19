@@ -1,20 +1,15 @@
 /* ============================================================
-   SAKURA RAMEN — style.css  (pixel-perfect v2.1 - Case Fixed)
-   Design spec: 1440px / min 160px side margins
+   SAKURA RAMEN — style.css (ULTIMATE FIX)
    ============================================================ */
 
 /* ---- RESET ---- */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -29,88 +24,44 @@ img  { display: block; max-width: 100%; }
 ul   { list-style: none; }
 a    { text-decoration: none; color: inherit; }
 
-/* ============================================================
-   NAVBAR
-   ============================================================ */
+/* ---- NAVBAR ---- */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 1000;
   height: 88px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 160px;
-  background: transparent; /* Transparent, damit das Hero-Bild durchscheint */
+  background: transparent;
 }
 
-/* Logo */
-.nav-logo-link { flex-shrink: 0; }
+.nav-logo { width: 64px; height: 64px; object-fit: contain; }
 
-.nav-logo {
-  width:  64px;
-  height: 64px;
-  object-fit: contain;
-}
-
-/* Links */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 48px;
-}
-
-.nav-links a {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  color: #ffffff;
-  letter-spacing: 0.03em;
-  transition: opacity 0.2s ease;
-}
-
+.nav-links { display: flex; align-items: center; gap: 48px; }
+.nav-links a { color: #ffffff; transition: opacity 0.2s; }
 .nav-links a:hover { opacity: 0.5; }
 
-/* Phone CTA */
 .nav-phone {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  color: #ffffff;
-  background-color: #9F0908;
-  padding: 10px 20px;
-  border-radius: 4px;
-  white-space: nowrap;
-  transition: opacity 0.2s ease;
+  display: flex; align-items: center; gap: 10px;
+  color: #ffffff; background-color: #9F0908;
+  padding: 10px 20px; border-radius: 4px;
+  transition: opacity 0.2s;
 }
 
-.nav-phone img {
-  height: 20px;
-  width: auto;
-  filter: brightness(0) invert(1);
-}
+.nav-phone img { height: 20px; filter: brightness(0) invert(1); }
 
-.nav-phone:hover { opacity: 0.85; }
-
-/* ============================================================
-   HERO  (100vh)
-   ============================================================ */
+/* ---- HERO (DER ENTSCHEIDENDE FIX) ---- */
 .hero {
   position: relative;
   width: 100%;
   height: 100vh;
-  margin-top: 0;
-  /* KORREKTUR: img klein, JPG groß - exakt wie im GitHub Ordner */
+  /* PFAD: img (klein) -> 1_hero (klein) -> JPG (GROSS) -> hero_bg.jpg (klein) */
   background-image: url('img/1_hero/JPG/hero_bg.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
   padding-top: 112px;
   display: flex;
   flex-direction: column;
@@ -122,7 +73,6 @@ a    { text-decoration: none; color: inherit; }
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.48);
-  pointer-events: none;
 }
 
 .hero-content {
@@ -135,241 +85,52 @@ a    { text-decoration: none; color: inherit; }
 }
 
 .hero h1 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 96px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 1.0;
-  text-shadow: 0 2px 32px rgba(0, 0, 0, 0.5);
+  font-weight: 700; font-size: 96px; color: #ffffff;
+  text-shadow: 0 2px 32px rgba(0,0,0,0.5);
 }
 
 .hero-sub {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  color: #ffffff;
-  text-align: center;
-  letter-spacing: 0.12em;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+  font-size: 24px; color: #ffffff; letter-spacing: 0.12em;
 }
 
-/* ============================================================
-   HOW TO ORDER
-   ============================================================ */
-.how-to-order {
-  background: #ffffff;
-  padding: 120px 160px;
-  text-align: center;
-}
+/* ---- HOW TO ORDER ---- */
+.how-to-order { padding: 120px 160px; text-align: center; }
+.how-to-order h2 { font-size: 80px; color: #9F0908; margin-bottom: 64px; }
+.steps { display: flex; justify-content: space-around; }
+.step { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.step img { width: 128px; height: 128px; }
+.step h3 { font-family: 'Economica'; font-size: 56px; }
 
-.how-to-order h2 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 80px;
-  color: #9F0908;
-  line-height: 1.05;
-  margin-bottom: 64px;
-}
-
-.steps {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-}
-
-.step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.step img {
-  width: 128px;
-  height: 128px;
-  object-fit: contain;
-}
-
-.step h3 {
-  font-family: 'Economica', sans-serif;
-  font-weight: 700;
-  font-size: 56px;
-  color: #000000;
-  line-height: 1.1;
-  text-align: center;
-}
-
-/* ============================================================
-   OUR MENU
-   ============================================================ */
+/* ---- OUR MENU ---- */
 .our-menu {
-  /* KORREKTUR: img klein, JPG groß */
+  /* PFAD: img (klein) -> 3_section_our_menu (klein) -> JPG (GROSS) -> bg */
   background-image: url('img/3_section_our_menu/JPG/section_our_menu_bg.jpg');
   background-size: cover;
-  background-position: center center;
   padding: 120px 160px 80px;
   text-align: center;
 }
 
-.our-menu h2 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 80px;
-  color: #9F0908;
-  line-height: 1.05;
-  margin-bottom: 64px;
-}
+.our-menu h2 { font-size: 80px; color: #9F0908; margin-bottom: 64px; }
+.menu-row { display: flex; align-items: center; gap: 80px; margin-bottom: 56px; text-align: left; }
+.menu-row--reverse { flex-direction: row-reverse; }
+.dish-img { width: 352px; height: 352px; object-fit: cover; border-radius: 50%; }
+.dish-info h3 { font-family: 'Economica'; font-size: 56px; }
+.price-row { display: flex; justify-content: space-between; width: 340px; }
+.price-label, .price-amount { font-size: 32px; color: #675E54; font-weight: 700; }
 
-.menu-row {
-  display: flex;
-  align-items: center;
-  gap: 80px;
-  margin-bottom: 56px;
-  text-align: left;
-}
+/* ---- FIND US ---- */
+.find-us { padding: 120px 160px; text-align: center; }
+.map-wrapper { width: 100%; height: 480px; border-radius: 4px; overflow: hidden; }
 
-.menu-row--reverse {
-  flex-direction: row-reverse;
-}
-
-.menu-row--last {
-  margin-bottom: 0;
-}
-
-.dish-img {
-  width:  352px;
-  height: 352px;
-  object-fit: cover;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.dish-info {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.dish-info h3 {
-  font-family: 'Economica', sans-serif;
-  font-weight: 700;
-  font-size: 56px;
-  color: #000000;
-  line-height: 1.1;
-}
-
-.price-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.price-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 48px;
-  width: 340px;
-}
-
-.price-label,
-.price-amount {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  color: #675E54;
-  line-height: 1.2;
-}
-
-/* ============================================================
-   FIND US AT
-   ============================================================ */
-.find-us {
-  background: #ffffff;
-  padding: 120px 160px;
-  text-align: center;
-}
-
-.find-us h2 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 80px;
-  color: #9F0908;
-  line-height: 1.05;
-  margin-bottom: 8px;
-}
-
-.find-us-address {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 64px;
-}
-
-.find-us-address img {
-  width: 24px;
-  height: auto;
-  flex-shrink: 0;
-}
-
-.find-us-address p {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  color: #000000;
-}
-
-.map-wrapper {
-  width: 100%;
-  height: 480px;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-.map-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* ---- FOOTER ---- */
 .footer {
   background-color: #0A141E;
-  min-height: 144px;
+  height: 144px;
   padding: 0 160px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.footer-brand {
-  height: 44px;
-  width: auto;
-  display: block;
-}
-
-.footer-socials {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.footer-socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.2s ease;
-}
-
-.footer-socials a:hover { opacity: 0.6; }
-
-.footer-socials img {
-  width:  40px;
-  height: 40px;
-  object-fit: contain;
-}
+.footer-brand { height: 44px; }
+.footer-socials { display: flex; gap: 24px; }
+.footer-socials img { width: 40px; height: 40px; }
