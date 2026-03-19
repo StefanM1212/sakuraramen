@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sakura Ramen</title>
+    <link rel="icon" type="image/png" href="IMG/1_hero/PNG/sakura_logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- ======================================================
+         NAVBAR
+    ====================================================== -->
+    <nav class="navbar">
+      <a href="#hero" class="nav-logo-link">
+        <img src="IMG/1_hero/SVG/sakura_logo.svg" alt="Sakura Ramen" class="nav-logo" />
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#menu">MENU</a></li>
+        <li><a href="#locations">LOCATIONS</a></li>
+        <li><a href="#">ABOUT</a></li>
+      </ul>
+
+      <a href="tel:+4917654564534" class="nav-phone">
+        <img src="IMG/1_hero/SVG/phone.svg" alt="" />
+        0176 54564534
+      </a>
+    </nav>
+
+    <!-- ======================================================
+         HERO  (100vh)
+    ====================================================== -->
+    <section class="hero" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>SAKURA RAMEN</h1>
+        <p class="hero-sub">THE BEST RAMEN IN TOWN</p>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         HOW TO ORDER
+    ====================================================== -->
+    <section class="how-to-order">
+      <h2>HOW TO ORDER</h2>
+      <div class="steps">
+
+        <div class="step">
+          <img src="IMG/2_section_how_to_order/SVG/noodle.svg" alt="Noodle" />
+          <h3>Pick your<br />noodle</h3>
+        </div>
+
+        <div class="step">
+          <img src="IMG/2_section_how_to_order/SVG/broth.svg" alt="Broth" />
+          <h3>Pick your<br />broth</h3>
+        </div>
+
+        <div class="step">
+          <img src="IMG/2_section_how_to_order/SVG/egg.svg" alt="Toppings" />
+          <h3>Add your<br />toppings</h3>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         OUR MENU
+    ====================================================== -->
+    <section class="our-menu" id="menu">
+      <h2>OUR MENU</h2>
+
+      <!-- Row 1 – image left, text right -->
+      <div class="menu-row">
+        <img
+          class="dish-img"
+          src="IMG/3_section_our_menu/PNG/R1.png"
+          alt="Tonkotsu Ramen"
+        />
+        <div class="dish-info">
+          <h3>Tonkotsu Ramen</h3>
+          <div class="price-list">
+            <div class="price-row">
+              <span class="price-label">CHICKEN</span>
+              <span class="price-amount">11.95€</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">BEEF</span>
+              <span class="price-amount">12.95€</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">SHRIMP</span>
+              <span class="price-amount">13.95€</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 – text left, image right -->
+      <div class="menu-row menu-row--reverse">
+        <div class="dish-info">
+          <h3>Spicy Miso Ramen</h3>
+          <div class="price-list">
+            <div class="price-row">
+              <span class="price-label">CHICKEN</span>
+              <span class="price-amount">11.95€</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">BEEF</span>
+              <span class="price-amount">12.95€</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">SHRIMP</span>
+              <span class="price-amount">13.95€</span>
+            </div>
+          </div>
+        </div>
+        <img
+          class="dish-img"
+          src="IMG/3_section_our_menu/PNG/R2.png"
+          alt="Spicy Miso Ramen"
+        />
+      </div>
+
+      <!-- Row 3 – image left, text right -->
+      <div class="menu-row menu-row--last">
+        <img
+          class="dish-img"
+          src="IMG/3_section_our_menu/PNG/R3.png"
+          alt="Shio Ramen"
+        />
+        <div class="dish-info">
+          <h3>Shio Ramen</h3>
+          <div class="price-list">
+            <div class="price-row">
+              <span class="price-label">CHICKEN</span>
+              <span class="price-amount">11.95€</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">BEEF</span>
+              <span class="price-amount">12.95€</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">SHRIMP</span>
+              <span class="price-amount">13.95€</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================
+         FIND US AT
+    ====================================================== -->
+    <section class="find-us" id="locations">
+      <h2>FIND US AT</h2>
+      <div class="find-us-address">
+        <img src="IMG/4_section_find_us_at/SVG/map_marker.svg" alt="" />
+        <p>Kapuzinerstraße 31, München, 80337</p>
+      </div>
+      <div class="map-wrapper">
+        <iframe
+          src="https://maps.google.com/maps?q=Kapuzinerstra%C3%9Fe+31+80337+M%C3%BCnchen&output=embed"
+          width="100%"
+          height="100%"
+          style="border: 0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Sakura Ramen – Kapuzinerstraße 31, München"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="footer">
+      <img
+        class="footer-brand"
+        src="IMG/5_section_footer/SVG/sakura_ramen_logo_and_text.svg"
+        alt="Sakura Ramen"
+      />
+      <div class="footer-socials">
+        <a
+          href="https://www.tripadvisor.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TripAdvisor"
+        >
+          <img src="IMG/5_section_footer/SVG/tripadvisor_logo.svg" alt="TripAdvisor" />
+        </a>
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <img src="IMG/5_section_footer/SVG/facebook_logo.svg" alt="Facebook" />
+        </a>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <img src="IMG/5_section_footer/SVG/instagram_logo.svg" alt="Instagram" />
+        </a>
+      </div>
+    </footer>
+
+  </body>
+</html>
