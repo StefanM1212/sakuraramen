@@ -203,6 +203,16 @@ a    { text-decoration: none; color: inherit; }
 }
 
 
+.find-us-address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 64px; /* <--- DAS HIER ist die magische Zahl aus deinem Design */
+}
+
+
+
 /* ---- FOOTER ---- */
 .footer {
   background-color: #0A141E;
