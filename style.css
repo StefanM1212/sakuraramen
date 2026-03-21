@@ -109,22 +109,91 @@ a    { text-decoration: none; color: inherit; }
 .step img { width: 128px; height: 128px; }
 .step h3 { font-family: 'Economica'; font-size: 56px; }
 
-/* ---- OUR MENU ---- */
+
+
 .our-menu {
-  /* PFAD: img (klein) -> 3_section_our_menu (klein) -> JPG (GROSS) -> bg */
   background-image: url('img/3_section_our_menu/JPG/section_our_menu_bg.jpg');
   background-size: cover;
   padding: 120px 160px 80px;
   text-align: center;
 }
 
-.our-menu h2 { font-size: 80px; color: #9F0908; margin-bottom: 64px; }
-.menu-row { display: flex; align-items: center; gap: 80px; margin-bottom: 56px; text-align: left; }
-.menu-row--reverse { flex-direction: row-reverse; }
-.dish-img { width: 352px; height: 352px; object-fit: cover; border-radius: 50%; }
-.dish-info h3 { font-family: 'Economica'; font-size: 56px; }
-.price-row { display: flex; justify-content: space-between; width: 340px; }
-.price-label, .price-amount { font-size: 32px; color: #675E54; font-weight: 700; }
+.our-menu h2 {
+  font-size: 80px;
+  color: #9F0908;
+  margin-bottom: 64px;
+}
+
+/* Der Standard-Container für jede Reihe */
+.menu-row {
+  display: flex;
+  align-items: center;
+  gap: 80px;           /* Einheitlicher Abstand zwischen Bild und Text */
+  margin-bottom: 56px;
+  text-align: left;
+}
+
+/* Die magische Klasse für jede zweite Reihe */
+.menu-row--reverse {
+  flex-direction: row-reverse; /* Bild wandert optisch nach rechts */
+  text-align: right;           /* Text wird rechtsbündig */
+}
+
+.dish-img {
+  width: 352px;
+  height: 352px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.dish-info h3 {
+  font-family: 'Economica', sans-serif;
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+
+/* Preis-Liste Wrapper (Mentor-Tipp) */
+.price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;            /* Abstand zwischen den Preiszeilen */
+  width: 340px;        /* Deine gewünschte Breite */
+}
+
+/* Wenn die Reihe reversed ist, schieben wir die Preisliste nach rechts */
+.menu-row--reverse .price-list {
+  margin-left: auto;
+}
+
+/* Die Preiszeile selbst */
+.price-row {
+  display: flex;
+  justify-content: space-between; /* Name links, Preis rechts */
+}
+
+/* Hier ist dein Look-Code (32px, Fett, Farbe) - sauber vererbt! */
+.price-row span {
+  font-size: 32px;
+  color: #675E54;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ---- FIND US ---- */
 .find-us { padding: 120px 160px; text-align: center; }
