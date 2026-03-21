@@ -35,7 +35,7 @@ a    { text-decoration: none; color: inherit; }
 
 /* ---- NAVBAR ---- */
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0; left: 0; right: 0;
   z-index: 1000;
   height: 88px;
