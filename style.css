@@ -95,6 +95,7 @@ a    { text-decoration: none; color: inherit; }
 .hero h1 {
   font-weight: 700; font-size: 96px; color: #ffffff;
   text-shadow: 0 2px 32px rgba(0,0,0,0.5);
+  text-align: center;
 }
 
 .hero-sub {
@@ -233,3 +234,56 @@ a    { text-decoration: none; color: inherit; }
 .footer-brand { height: 44px; }
 .footer-socials { display: flex; gap: 24px; }
 .footer-socials img { width: 40px; height: 40px; }
+
+
+
+@media screen and (max-width: 700px)
+
+{
+  
+
+.hide-mobile
+{
+  display: none;
+}
+
+
+
+
+
+.steps {
+
+
+  display: flex;
+    flex-direction: column; /* HIER passiert die Magie: Aus Reihe wird Stapel */
+    align-items: center;
+    gap: 40px; /* Mehr Platz zwischen den Schritten auf dem Handy */
+  
+
+}
+
+
+.menu-row {
+    display: flex;
+    flex-direction: column; /* Stapeln: Bild über Text */
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 50px; /* Platz zum nächsten Gericht */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
