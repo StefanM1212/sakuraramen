@@ -104,15 +104,25 @@ a    { text-decoration: none; color: inherit; }
 
 /* ---- HOW TO ORDER ---- */
 .how-to-order { padding: 120px 160px; text-align: center; }
-.how-to-order h2 { font-size: 80px; color: #9F0908; margin-bottom: 64px; 
-                 
-                 text-align: center;
-                 
-                 }
+
+
+.how-to-order h2 {
+  
+  
+font-size: 80px; 
+color: #9F0908; 
+text-align: center;
+
+
+
+}
+
+
 .steps { display: flex; justify-content: space-around; }
 .step { display: flex; flex-direction: column; align-items: center; gap: 16px; }
 .step img { width: 128px; height: 128px; }
 .step h3 { font-family: 'Economica'; font-size: 56px; }
+
 
 
 
@@ -281,8 +291,22 @@ a    { text-decoration: none; color: inherit; }
 
 
 
+.how-to-order h2 {
+  
+  
+font-size: 60px; 
+color: #9F0908; 
+text-align: center;
+margin-bottom: 40px;
 
 
+
+}
+
+.our-menu h2 {
+  font-size: 70px;
+  color: #9F0908;
+  margin-bottom: 40px;
 
 
 
