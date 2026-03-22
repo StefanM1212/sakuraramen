@@ -287,14 +287,34 @@ text-align: center;
   }
 
 
+.hero-content h1 {
+  font-size: 48px; /* Kleinere Schriftgröße für Handys */
+}
 
+.hero-content {
+  text-align: center;
+  flex-direction: column;
+  padding: 0px 20px;
+}
+
+
+
+
+
+
+
+
+.how-to-order {
+  padding: 80px 20px; /* Weniger seitlicher Padding auf Handy */
+  text-align: center;
+}
 
 
 
 .how-to-order h2 {
   
   
-font-size: 60px; 
+font-size: 35px; 
 color: #9F0908; 
 text-align: center;
 margin-bottom: 40px;
@@ -303,10 +323,29 @@ margin-bottom: 40px;
 
 }
 
+
+.menu-row {
+  display: flex;
+  flex-direction: column; /* Stapeln: Bild über Text */
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  margin-bottom: 50px; /* Platz zum nächsten Gericht */
+}
+
+
+
+.our-menu {
+ padding: 100px 20px; /* Weniger seitlicher Padding auf Handy */
+  text-align: center;
+
+
+}
+
 .our-menu h2 {
   font-size: 70px;
   color: #9F0908;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 
 
 
@@ -316,8 +355,16 @@ margin-bottom: 40px;
 }
 
 
+.find-us {
+  padding: 100px 20px; /* Weniger seitlicher Padding auf Handy */
+  text-align: center;
 
 
+
+
+
+
+}
 
 
 
