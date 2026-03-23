@@ -16,9 +16,13 @@ html { scroll-behavior: smooth; }
 .hero {
     background-image: url('img/hero_bg.jpg'); /* Kein JPG-Ordner mehr nötig! */
 }
-.our-menu {
-    background-image: url('img/section_our_menu_bg.jpg');
-}
+
+
+
+
+
+
+
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -26,8 +30,11 @@ body {
   font-size: 24px;
   color: #000000;
   background: #ffffff;
-  overflow-x: hidden;
 }
+
+
+
+
 
 img  { display: block; max-width: 100%; }
 ul   { list-style: none; }
@@ -155,8 +162,8 @@ text-align: center;
 }
 
 .dish-img {
-  width: 352px;
-  height: 352px;
+  width: 100%;
+  max-width: 280px;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -172,7 +179,7 @@ text-align: center;
   display: flex;
   flex-direction: column;
   gap: 8px;            /* Abstand zwischen den Preiszeilen */
-  width: 340px;        /* Deine gewünschte Breite */
+  width: 100%;       /* Deine gewünschte Breite */
 }
 
 /* Wenn die Reihe reversed ist, schieben wir die Preisliste nach rechts */
@@ -192,6 +199,11 @@ text-align: center;
   color: #675E54;
   font-weight: 700;
 }
+
+
+
+
+
 
 
 
@@ -251,7 +263,16 @@ text-align: center;
 
 
 
-@media screen and (max-width: 700px)
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px)
 
 {
   
@@ -336,7 +357,7 @@ margin-bottom: 40px;
 
 
 .our-menu {
- padding: 100px 20px; /* Weniger seitlicher Padding auf Handy */
+ padding: 100px 10px; /* Weniger seitlicher Padding auf Handy */
   text-align: center;
 
 
@@ -368,5 +389,46 @@ margin-bottom: 40px;
 
 
 
+
+
+
+
+
+
 }
 
+
+@media screen and (max-width: 700px) {
+  /* 1. Navbar: Platz schaffen */
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Logo <--- Platz ---> Telefon */
+    align-items: center;
+    padding: 10px 15px;             /* Wenig Rand links/rechts */
+    width: 100%;
+    box-sizing: border-box;         /* Padding wird nicht zur Breite addiert */
+  }
+
+  /* 2. Logo: Stabilisieren */
+  .nav-logo-link {
+    flex-shrink: 0;                 /* Verbot zu schrumpfen */
+    width: 50px;                    /* Feste Größe für Mobile */
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-logo {
+    width: 100%;                    /* Bild füllt den 40px Link aus */
+    height: auto;
+  }
+
+  /* 3. Telefon: Kompakt machen */
+  .nav-phone {
+    font-size: 18px;                /* Kleine Schrift für Mobile */
+    padding: 6px 10px;              /* Wenig Polsterung in der Box */
+    display: flex;
+    align-items: center;
+    gap: 5px;                       /* Kleiner Abstand zum Icon */
+    white-space: nowrap;            /* Nummer darf nicht umbrechen */
+  }
+}
