@@ -216,50 +216,132 @@ text-align: center;
 
 
 /* ---- FIND US ---- */
-.find-us { padding: 120px 160px; text-align: center; }
-.map-wrapper { width: 100%; height: 480px; border-radius: 4px; overflow: hidden; }
 
+
+/* ---- FIND US SECTION ---- */
+.find-us {
+    padding-top: 120px;
+    padding-bottom: 0; /* WICHTIG: Entfernt die Lücke zum Footer */
+    text-align: center;
+    width: 100%;
+}
+
+/* Textelemente erhalten das Seiten-Padding separat */
+.find-us h2, 
+.find-us-address {
+    padding-left: 160px; 
+    padding-right: 160px;
+}
 
 .find-us h2 {
     font-family: 'Raleway', sans-serif;
-    font-weight: 700; /* Bold */
+    font-weight: 700;
     font-size: 80px;
-    color: #9F0908;   /* Das Sakura-Rot */
-    margin-bottom: 8px; /* Der Abstand laut roter Linie im Bild */
+    color: #9F0908;
+    margin-bottom: 8px;
     text-transform: uppercase;
 }
-
 
 .find-us-address {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 64px; /* <--- DAS HIER ist die magische Zahl aus deinem Design */
+    margin-bottom: 64px; /* Deine "magische Zahl" als Abstand zur Karte */
 }
 
+/* ---- MAP WRAPPER (Full Width) ---- */
 .map-wrapper {
-    width: 100%;
+    width: 100%;         /* Geht jetzt über die volle Breite */
     height: 480px;
-    border-radius: 4px;
+    margin: 0;           /* Kein zusätzlicher Außenabstand */
+    padding: 0;
     overflow: hidden;
-    margin-top: 64px; /* <--- ...und packen ihn HIER rein */
+    line-height: 0;      /* Verhindert kleine Abstände unter dem Iframe */
+    /* border-radius: 4px; <-- Falls du willst, dass es bündig abschließt, nimm den Radius raus */
 }
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    display: block;      /* WICHTIG: Entfernt den automatischen Spalt unterhalb des Iframes */
+    border: 0;
+}
+
+
+
+
+
+
 
 
 
 /* ---- FOOTER ---- */
+/* ---- FOOTER DESKTOP ---- */
+/* ---- FOOTER DESKTOP (Nebeneinander) ---- */
 .footer {
   background-color: #0A141E;
   height: 144px;
   padding: 0 160px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Brand links, Socials rechts */
 }
-.footer-brand { height: 44px; }
-.footer-socials { display: flex; gap: 24px; }
-.footer-socials img { width: 40px; height: 40px; }
+
+.footer-brand-container {
+  display: flex;         /* Das hier sorgt dafür, dass Logo + Text nebeneinander sind */
+  align-items: center;   /* Mittig auf einer Linie */
+  gap: 24px;             /* Abstand zwischen Blüte und Schrift */
+}
+
+.footer-logo-icon {
+  height: 44px;          /* Größe deiner Blüte */
+  width: auto;
+}
+
+.footer-brand-text {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;   /* Verhindert Umbruch des Namens */
+}
+
+.footer-socials {
+  display: flex;
+  gap: 24px;
+}
+
+/* ---- FOOTER MOBILE (Untereinander & Text weg) ---- */
+@media (max-width: 1100px) {
+  .footer {
+    flex-direction: column; /* Stapeln: Logo oben, Socials unten */
+    height: auto;
+    padding: 40px 20px;
+    gap: 32px;
+    justify-content: center;
+  }
+
+  .footer-brand-text {
+    display: none;          /* Text verschwindet auf dem Handy */
+  }
+
+  .footer-brand-container {
+    justify-content: center; /* Zentriert die Blüte im Footer */
+    width: 100%;
+  }
+
+  .footer-logo-icon {
+    height: 60px;           /* Blüte auf dem Handy etwas größer */
+  }
+
+  .footer-socials {
+    justify-content: center;
+    width: 100%;
+  }
+}
 
 
 
@@ -270,9 +352,7 @@ text-align: center;
 
 
 
-
-
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1100px)
 
 {
   
@@ -319,7 +399,12 @@ text-align: center;
 }
 
 
+.step h3{
+font-size: 32px; /* Kleinere Schriftgröße für Handys */
 
+
+
+}
 
 
 
@@ -335,7 +420,7 @@ text-align: center;
 .how-to-order h2 {
   
   
-font-size: 35px; 
+font-size: 33px; 
 color: #9F0908; 
 text-align: center;
 margin-bottom: 40px;
@@ -364,7 +449,7 @@ margin-bottom: 40px;
 }
 
 .our-menu h2 {
-  font-size: 70px;
+  font-size: 50px;
   color: #9F0908;
   margin-bottom: 60px;
 
@@ -431,4 +516,51 @@ margin-bottom: 40px;
     gap: 5px;                       /* Kleiner Abstand zum Icon */
     white-space: nowrap;            /* Nummer darf nicht umbrechen */
   }
+
+
+
+
+.hero-content h1 {
+  font-size: 35px; /* Kleinere Schriftgröße für Handys */
 }
+
+.hero-sub {
+  font-size: 20px; /* Kleinere Schriftgröße für Handys */
+
+
+}
+
+
+.find-us {
+        padding-top: 60px; /* Oben etwas weniger Platz auf dem Handy */
+    }
+
+    .find-us h2 {
+        font-size: 36px;       /* Deutlich kleiner, damit es in eine Zeile passt */
+        padding: 0 20px;       /* Weniger Seitenabstand als am Desktop */
+        margin-bottom: 12px;
+        white-space: nowrap;   /* Erzwingt eine Zeile, falls es doch eng wird */
+    }
+
+    .find-us-address {
+        padding: 0 20px;       /* Auch hier weniger Seitenabstand */
+        margin-bottom: 32px;   /* Kleinerer Abstand zur Karte auf dem Handy */
+        flex-direction: row;   /* Icon und Text bleiben nebeneinander */
+        font-size: 16px;       /* Lesbare Größe für mobile Geräte */
+    }
+
+    .map-wrapper {
+        height: 350px;         /* Karte auf dem Handy etwas weniger hoch */
+        border-radius: 0;      /* Auf dem Handy sieht "Edge-to-Edge" oft besser aus */
+    }
+}
+
+
+
+
+
+
+
+
+
+
