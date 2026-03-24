@@ -109,6 +109,9 @@ a    { text-decoration: none; color: inherit; }
   font-size: 24px; color: #ffffff; letter-spacing: 0.12em;
 }
 
+
+
+
 /* ---- HOW TO ORDER ---- */
 .how-to-order { padding: 120px 160px; text-align: center; }
 
@@ -119,6 +122,7 @@ a    { text-decoration: none; color: inherit; }
 font-size: 80px; 
 color: #9F0908; 
 text-align: center;
+margin-bottom: 64px;
 
 
 
@@ -317,30 +321,27 @@ text-align: center;
 /* ---- FOOTER MOBILE (Untereinander & Text weg) ---- */
 @media (max-width: 1100px) {
   .footer {
-    flex-direction: column; /* Stapeln: Logo oben, Socials unten */
+    flex-direction: row; /* Stapeln: Logo oben, Socials unten */
     height: auto;
-    padding: 40px 20px;
-    gap: 32px;
-    justify-content: center;
+    padding: 24px 20px; /* Mehr Platz oben/unten, weniger an den Seiten */
+    justify-content: space-between;
   }
 
   .footer-brand-text {
     display: none;          /* Text verschwindet auf dem Handy */
   }
 
-  .footer-brand-container {
-    justify-content: center; /* Zentriert die Blüte im Footer */
-    width: 100%;
-  }
 
   .footer-logo-icon {
-    height: 60px;           /* Blüte auf dem Handy etwas größer */
+    height: 40px;           /* Blüte auf dem Handy etwas größer */
   }
 
-  .footer-socials {
-    justify-content: center;
-    width: 100%;
-  }
+.footer-socials img {
+    height: 32px;           /* Social Icons auf dem Handy etwas kleiner */
+    
+
+
+
 }
 
 
@@ -378,14 +379,61 @@ text-align: center;
 }
 
 
+
+.our-menu {
+  padding: 80px 20px !important; /* Viel weniger Platz an den Seiten! */
+  background-size: cover;
+  width: 100%;
+  box-sizing: border-box; /* Ganz wichtig, damit Padding die Breite nicht sprengt */
+}
+
+
 .menu-row {
-    display: flex;
-    flex-direction: column; /* Stapeln: Bild über Text */
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-    margin-bottom: 50px; /* Platz zum nächsten Gericht */
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  gap: 30px;             /* Jetzt hat der Gap auch Platz zum Atmen */
+  margin-bottom: 100px;
+  width: 100%;
+}
+
+
+.our-menu h2 {
+  font-size: 40px; /* Kleinere Schriftgröße für Handys */
+  color: #9F0908;
+  margin-bottom: 40px;
+}
+
+
+.our-menu h3 {
+  font-size: 32px; /* Kleinere Schriftgröße für Handys */
+  text-align: left;
+  padding-left: 0px; /* Etwas Abstand zum Rand auf dem Handy */
+}
+
+
+.price-row span {
+  font-size: 24px; /* Kleinere Schriftgröße für Handys */
+  justify-content: space-between; /* Preiszeile zentrieren auf dem Handy */
+}
+
+.price-row {
+  display: flex;
+  gap: 80px; /* Abstand zwischen Name und Preis auf dem Handy */
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 .hero-content h1 {
@@ -405,6 +453,22 @@ font-size: 32px; /* Kleinere Schriftgröße für Handys */
 
 
 }
+
+
+
+
+
+
+.price-list {
+  width: 100%;
+  max-width: 260px;    /* Verhindert, dass die Liste zu breit für das Handy wird */
+  margin: 0 auto;      /* Zentriert die Liste unter der Überschrift */
+}
+
+
+
+
+
 
 
 
@@ -430,39 +494,8 @@ margin-bottom: 40px;
 }
 
 
-.menu-row {
-  display: flex;
-  flex-direction: column; /* Stapeln: Bild über Text */
-  align-items: center;
-  text-align: center;
-  gap: 40px;
-  margin-bottom: 50px; /* Platz zum nächsten Gericht */
-}
-
-
-
-.our-menu {
- padding: 100px 10px; /* Weniger seitlicher Padding auf Handy */
-  text-align: center;
-
-
-}
-
-.our-menu h2 {
-  font-size: 50px;
-  color: #9F0908;
-  margin-bottom: 60px;
-
-
-
-
-
-
-}
-
 
 .find-us {
-  padding: 100px 20px; /* Weniger seitlicher Padding auf Handy */
   text-align: center;
 
 
@@ -521,11 +554,11 @@ margin-bottom: 40px;
 
 
 .hero-content h1 {
-  font-size: 35px; /* Kleinere Schriftgröße für Handys */
+  font-size: 44px; /* Kleinere Schriftgröße für Handys */
 }
 
 .hero-sub {
-  font-size: 12px; /* Kleinere Schriftgröße für Handys */
+  font-size: 16px; /* Kleinere Schriftgröße für Handys */
 
 
 }
@@ -562,5 +595,7 @@ margin-bottom: 40px;
 
 
 
+
+}
 
 
